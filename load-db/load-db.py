@@ -6,9 +6,12 @@ import pandas as pd
 import requests
 import sqlalchemy
 import yfinance as yf
+import time 
+
+time.sleep(60)
 
 print(sqlalchemy.__version__)
-engine = sqlalchemy.create_engine('postgresql://postgres:mypassword@backend-db:5432/dbsto')
+engine = sqlalchemy.create_engine('postgresql://postgres:mypassword@db:5432/dbsto')
 insp = sqlalchemy.inspect(engine)
 # with open('/home/vagrant/autofile','a+') as f:
 # 	f.write('Program started running at :'+datetime.datetime.today().strftime("%Y-%m-%d-%H-%M-%S")+'\n')
